@@ -19,7 +19,7 @@ int main() {
             char offset = isupper(M[j]) ? 'A' : 'a';
             C[j] = tab[(M[j] - offset + k) % 26];
         } else {
-            // Do nothing for non-alphabetic characters
+  // Do nothing for non-alphabetic characters 
             C[j] = M[j];
         }
     }
