@@ -1,0 +1,30 @@
+Déclarer tab[26] : tableau de caractères
+Pour i de 0 à 25
+    tab[i] <- 'a' + i
+
+Déclarer k : entier
+Déclarer M[100] : tableau de caractères
+Déclarer C[100] : tableau de caractères
+
+Afficher "Entrez le message M : "
+Lire M
+
+Afficher "Entrez la valeur de k : "
+Lire k
+
+Initialiser len <- longueur de la chaîne M
+
+Pour j de 0 à len - 1
+    Si M[j] est une lettre alphabétique
+        Si M[j] est en majuscule
+            offset <- 'A'
+        Sinon
+            offset <- 'a'
+
+        C[j] <- tab[(M[j] - offset + k) modulo 26]
+    Sinon
+        C[j] <- M[j]
+
+C[len] <- '\0'  
+
+Afficher "Message crypté : " + C
