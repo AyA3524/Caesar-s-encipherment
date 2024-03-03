@@ -12,14 +12,14 @@ int main() {
     std::cin.getline(M, sizeof(M));
     std::cout << "Enter the value of k : ";
     std::cin >> k;
-    // Message encryption
+
     int len = strlen(M);
     for (int j = 0; j < len; ++j) {
         if (isalpha(M[j])) {
             char offset = isupper(M[j]) ? 'A' : 'a';
             C[j] = tab[(M[j] - offset + k) % 26];
         } else {
-  // Do nothing for non-alphabetic characters 
+
             C[j] = M[j];
         }
     }
